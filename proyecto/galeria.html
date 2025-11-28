@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Nova - Galería</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="imagenes/favicon.png" type="image/png">    
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="imagenes/favicon.png" alt="Logo Nova">
+                <a href="landing.html" class="company-name"><h3 class="titulo-nova color-verde-claro">NOVA</h3></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html#inicio">INICIO</a></li>
+                <li><a href="homepage.html#nosotros">NOSOTROS</a></li>
+                <li><a href="homepage.html#peliculas">PELÍCULAS</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="homepage.html#dulceria">DULCERÍA</a></li>
+                <li><a href="homepage.html#vip">VIP</a></li>
+                <li><a href="tour.html">Tour360</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="p-50">
+        <div class="row">
+            <div class="col-12 texto-centrado">
+                <h2 class="color-verde-claro titulo-equilibrado">Galería de Momentos Estelares</h2>
+                <p class="texto-equilibrado">Explora nuestras instalaciones y experiencias cinematográficas</p>
+            </div>
+        </div>
+        <div class="galeria-categorias">
+            <button class="categoria-btn active" onclick="filtrarGaleria('todas')">Todas</button>
+            <button class="categoria-btn" onclick="filtrarGaleria('salas')">Salas</button>
+            <button class="categoria-btn" onclick="filtrarGaleria('lobby')">Lobby</button>
+            <button class="categoria-btn" onclick="filtrarGaleria('dulceria')">Dulcería</button>
+            <button class="categoria-btn" onclick="filtrarGaleria('eventos')">Eventos</button>
+        </div>
+<div class="galeria-grid">
+    <div class="galeria-item" data-categoria="salas">
+        <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sala de cine premium">
+        <div class="galeria-overlay">
+            <h3>Sala Premium</h3>
+            <p>Experiencia cinematográfica de lujo</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(0)">Ver imagen</button>
+        </div>
+    </div>
+    <div class="galeria-item" data-categoria="salas">
+        <img src="https://images.squarespace-cdn.com/content/v1/581bd18003596e16cc905cad/5b8a2d7a-6f9f-4b02-bec7-8fab0c40ae33/more-about-imax-news.jpg" alt="Pantalla IMAX">
+        <div class="galeria-overlay">
+            <h3>Pantalla IMAX</h3>
+            <p>La mejor tecnología de proyección</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(1)">Ver imagen</button>
+        </div>
+    </div>
+    <div class="galeria-item" data-categoria="lobby">
+        <img src="https://t4.ftcdn.net/jpg/09/25/10/91/360_F_925109183_tnn5IfMS5iWbvGLsjqxggtZtUchHCHSr.jpg" alt="Lobby principal">
+        <div class="galeria-overlay">
+            <h3>Lobby Principal</h3>
+            <p>Espacio moderno y acogedor</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(2)">Ver imagen</button>
+        </div>
+    </div>
+
+    <div class="galeria-item" data-categoria="salas">
+        <img src="https://images.pexels.com/photos/7991375/pexels-photo-7991375.jpeg">
+        <div class="galeria-overlay">
+            <h3>Asientos de Lujo</h3>
+            <p>Comodidad máxima garantizada</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(3)">Ver imagen</button>
+        </div>
+    </div>
+    <div class="galeria-item" data-categoria="dulceria">
+        <img src="https://images.pexels.com/photos/27080475/pexels-photo-27080475.jpeg" alt="Dulcería galáctica">
+        <div class="galeria-overlay">
+            <h3>Dulcería Galáctica</h3>
+            <p>Snacks para tu aventura</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(4)">Ver imagen</button>
+        </div>
+    </div>
+
+    <div class="galeria-item" data-categoria="eventos">
+        <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Eventos especiales">
+        <div class="galeria-overlay">
+            <h3>Eventos Especiales</h3>
+            <p>Estrenos y premieres exclusivos</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(5)">Ver imagen</button>
+        </div>
+    </div>
+
+    <div class="galeria-item" data-categoria="salas">
+        <img src="https://www.panoramaaudiovisual.com/wp-content/uploads/2013/06/Best-Digital-Dolby-Premiere-Atmos.jpg" alt="Sistema de audio">
+        <div class="galeria-overlay">
+            <h3>Audio Dolby</h3>
+            <p>Sistema de sonido envolvente</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(6)">Ver imagen</button>
+        </div>
+    </div>
+
+    <div class="galeria-item" data-categoria="lobby">
+        <img src="https://static.cinepolis.com/marcas/vip/imagenes/instalaciones/10/201761181322504.jpg" alt="Área VIP">
+        <div class="galeria-overlay">
+            <h3>Área VIP</h3>
+            <p>Exclusividad y confort</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(7)">Ver imagen</button>
+        </div>
+    </div>
+
+    <div class="galeria-item" data-categoria="dulceria">
+        <img src="https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg?auto=compress&cs=tinysrgb&w=800" alt="Palomitas frescas">
+        <div class="galeria-overlay">
+            <h3>Palomitas Frescas</h3>
+            <p>Preparadas al momento</p>
+            <button class="btn-ver-imagen" onclick="abrirLightbox(8)">Ver imagen</button>
+        </div>
+    </div>
+</div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="cerrarLightbox()">&times;</span>
+        <span class="lightbox-prev" onclick="cambiarImagen(-1)">&#10094;</span>
+        <span class="lightbox-next" onclick="cambiarImagen(1)">&#10095;</span>
+        
+        <div class="lightbox-contenido">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-titulo"></h3>
+                <p id="lightbox-descripcion"></p>
+            </div>
+            <div class="lightbox-contador">
+                <span id="lightbox-numero"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-derechos">
+        <p>© 2025 <strong>Nova - La Galaxia del Cine</strong>. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

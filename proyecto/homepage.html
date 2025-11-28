@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Nova - La Galaxia del Cine</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="imagenes/favicon.png" type="image/png">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13f36b8e84.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img src="imagenes/favicon.png" alt="Logo Nova">
+          <a href="landing.html" class="company-name">
+            <h3 class="titulo-nova color-verde-claro">NOVA</h3>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#nosotros">NOSOTROS</a></li>
+          <li><a href="#peliculas">PELÍCULAS</a></li>
+          <li><a href="galeria.html">GALERÍA</a></li>
+          <li><a href="#dulceria">DULCERÍA</a></li>
+          <li><a href="#vip">VIP</a></li>
+          <li><a href="tour.html">TOUR360</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="inicio">
+      <div class="video-hero" onclick="abrirVideoLightbox()">
+        <video class="video-hero__media" muted loop playsinline preload="metadata" id="video-preview">
+          <source src="videos/video.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <div class="play-button-container">
+            <div class="play-button">
+              <svg width="80" height="80" viewBox="0 0 80 80">
+                <circle cx="40" cy="40" r="38" fill="rgba(15, 30, 35, 0.8)" stroke="#9BCEC6" stroke-width="2" />
+                <polygon points="32,25 32,55 55,40" fill="#9BCEC6" />
+              </svg>
+            </div>
+            <h2 class="video-title color-verde-claro">Descubre la Experiencia Nova</h2>
+            <p class="video-subtitle">Haz clic para ver el video completo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="video-lightbox" class="video-lightbox">
+      <span class="video-lightbox-close" onclick="cerrarVideoLightbox()">&times;</span>
+
+      <div class="video-lightbox-contenido">
+        <video id="video-lightbox-player" controls preload="metadata">
+          <source src="videos/video.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
+
+        <div class="video-lightbox-info">
+          <h3>Bienvenido a Nova - La Galaxia del Cine</h3>
+          <p>Sumérgete en una experiencia cinematográfica única con tecnología de última generación</p>
+        </div>
+      </div>
+    </div>
+    <section class="p-50" id="nosotros">
+      <div class="row">
+        <div class="col-6">
+          <h2 class="titulo-equilibrado">La magia del cine</h2>
+          <p class="texto-equilibrado">Desde su nacimiento a finales del siglo XIX, el cine ha sido mucho más que una
+            sucesión de imágenes en movimiento: ha sido una ventana hacia mundos imaginarios y un espejo de nuestra propia
+            realidad. Lo que comenzó como una curiosidad técnica con los hermanos Lumière pronto se transformó en un arte
+            capaz de despertar emociones, contar historias y unir culturas a través de la pantalla.</p>
+
+          <p class="texto-equilibrado">A lo largo de su historia, el cine ha evolucionado con la humanidad: del blanco y
+            negro al color, del silencio a los grandes soundtracks, de las salas oscuras a las plataformas digitales. Sin
+            importar el formato o la época, la esencia del cine sigue siendo la misma: una experiencia mágica donde la
+            luz, la música y las emociones se funden para dar vida a los sueños.</p>
+        </div>
+        <div class="col-6">
+          <img class="img-rounded" src="imagenes/cine-story.png" alt="Historia del cine">
+        </div>
+      </div>
+    </section>
+    <section class="px-50 py-50" id="peliculas">
+      <div class="row">
+        <div class="col-12 texto-centrado">
+          <h2 class="color-verde-claro titulo-equilibrado">Cartelera Estelar</h2>
+          <p class="texto-equilibrado">Descubre las películas que están brillando en nuestras salas</p>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-btn-prev" onclick="moverCarousel(-1)">
+          <span>&#10094;</span>
+        </button>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carousel-track">
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img src="https://es.web.img3.acsta.net/pictures/14/10/02/11/07/341344.jpg">
+                <div class="movie-info">
+                  <h3>Interestelar</h3>
+                  <p class="movie-genre">Ciencia Ficción</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 9.2/10</div>
+                  <p class="movie-description">Un grupo de exploradores viaja a...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Interestelar')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_.jpg"
+                  alt="Película 2">
+                <div class="movie-info">
+                  <h3>Blade Runner 2049</h3>
+                  <p class="movie-genre">Thriller</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 8.5/10</div>
+                  <p class="movie-description">Treinta años después de lo ocurrido...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Blade Runner 2049')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BY2RjZDM5NDQtOGJkYy00NzMwLTg4YTAtZWFkOGM3NTYzM2I4XkEyXkFqcGc@._V1_.jpg"
+                  alt="Película 3">
+                <div class="movie-info">
+                  <h3>Barbie</h3>
+                  <p class="movie-genre">Comedia</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 8.8/10</div>
+                  <p class="movie-description">Vivir en Barbie Land significa ser...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Barbie')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img src="https://wallpapers.com/images/featured/guardianes-de-la-galaxia-5paov6a8eku13ugb.jpg"
+                  alt="Película 4">
+                <div class="movie-info">
+                  <h3>Guardianes de la Galaxia</h3>
+                  <p class="movie-genre">Aventura</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 9.0/10</div>
+                  <p class="movie-description">El audaz aventurero Peter Quill se...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Guardianes de la Galaxia')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img
+                  src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRedxAXyu-iXVTTjszOkQ-vJPmKisPQOlHUYcVRVCcJ0LUlYHRz"
+                  alt="Película 5">
+                <div class="movie-info">
+                  <h3>Sombras del Pasado</h3>
+                  <p class="movie-genre">Suspenso</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 8.3/10</div>
+                  <p class="movie-description">'Un ex detective de homicidios que...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Sombras del Pasado')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="movie-card">
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BNGE1YzI4NzMtZTUxNi00Y2I5LTg2MmQtODE0NThmYTFmMDk0XkEyXkFqcGc@._V1_.jpg"
+                  alt="Película 6">
+                <div class="movie-info">
+                  <h3>Matrix</h3>
+                  <p class="movie-genre">Acción</p>
+                  <div class="movie-rating"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> 8.7/10</div>
+                  <p class="movie-description">Un hacker se da cuenta por medio...</p>
+                  <button class="btn-trailer" onclick="mostrarInfo('Matrix')">Ver Más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn-next" onclick="moverCarousel(1)">
+          <span>&#10095;</span>
+        </button>
+      </div>
+      <div class="carousel-indicators" id="carousel-indicators"></div>
+    </section>
+    <section class="p-50" id="dulceria">
+      <div class="row">
+        <div class="col-12 texto-centrado">
+          <h2 class="color-verde-claro titulo-equilibrado">Dulcería Galáctica</h2>
+          <p class="texto-equilibrado">Disfruta de nuestros combos estelares</p>
+        </div>
+      </div>
+      <div class="combos-container">
+        <div class="combo-card glass">
+          <h3 class="color-verde-claro">Combo Simple</h3>
+          <p class="texto-equilibrado">Elige tu snack favorito</p>
+          <div class="combo-options">
+            <label>
+              <input type="radio" name="combo-simple" value="palomitas" checked>
+              <span>🍿 Palomitas Medianas - $50</span>
+            </label>
+            <label>
+              <input type="radio" name="combo-simple" value="refresco">
+              <span>🥤 Refresco Grande - $40</span>
+            </label>
+            <label>
+              <input type="radio" name="combo-simple" value="nachos">
+              <span>🧀 Nachos con Queso - $60</span>
+            </label>
+          </div>
+          <div class="combo-precio">
+            <span class="precio-label">Total:</span>
+            <span class="precio-valor" id="precio-simple">$50</span>
+          </div>
+          <button class="botones verde-degradado btn-ancho2" onclick="agregarCombo('simple')">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="combo-card glass">
+          <h3 class="color-verde-claro">Combo Doble</h3>
+          <p class="texto-equilibrado">Palomitas + Refresco</p>
+          <div class="combo-options">
+            <div class="option-group">
+              <label class="option-title">Tamaño de Palomitas:</label>
+              <select id="palomitas-doble" class="form-control combo-select">
+                <option value="70">Mediano - $70</option>
+                <option value="90">Grande - $90</option>
+                <option value="120">Jumbo - $120</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label class="option-title">Tamaño de Refresco:</label>
+              <select id="refresco-doble" class="form-control combo-select">
+                <option value="40">Mediano - $40</option>
+                <option value="50">Grande - $50</option>
+                <option value="65">Jumbo - $65</option>
+              </select>
+            </div>
+          </div>
+          <div class="combo-precio">
+            <span class="precio-label">Total:</span>
+            <span class="precio-valor" id="precio-doble">$110</span>
+          </div>
+          <button class="botones verde-degradado btn-ancho2" onclick="agregarCombo('doble')">
+            Agregar al Carrito
+          </button>
+        </div>
+        <div class="combo-card glass combo-destacado">
+          <div class="badge-destacado"><i class="fa-solid fa-star" style="color: #a4902a;"></i> MÁS POPULAR</div>
+          <h3 class="color-verde-claro">Combo Interactivo</h3>
+          <p class="texto-equilibrado">Personaliza tu experiencia</p>
+          <div class="combo-options">
+            <div class="option-group">
+              <label class="option-title">Producto Base:</label>
+              <select id="base-interactivo" class="form-control combo-select">
+                <option value="90">Palomitas Grande - $90</option>
+                <option value="80">Nachos Grandes - $80</option>
+                <option value="70">Hot Dog - $70</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label class="option-title">Bebida:</label>
+              <select id="bebida-interactivo" class="form-control combo-select">
+                <option value="50">Refresco Grande - $50</option>
+                <option value="45">Agua - $45</option>
+                <option value="60">Jugo Natural - $60</option>
+                <option value="55">Té Helado - $55</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label class="option-title">Extras:</label>
+              <div class="extras-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="extra-checkbox" value="25">
+                  <span>🍫 Chocolate - $25</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="extra-checkbox" value="30">
+                  <span>🍬 Dulces - $30</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="extra-checkbox" value="20">
+                  <span>🧈 Mantequilla Extra - $20</span>
+                </label>
+              </div>
+            </div>
+            <div class="option-group">
+              <label class="option-title">Cantidad:</label>
+              <div class="cantidad-control">
+                <button class="btn-cantidad" onclick="cambiarCantidad(-1)">-</button>
+                <span id="cantidad-interactivo">1</span>
+                <button class="btn-cantidad" onclick="cambiarCantidad(1)">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="combo-precio precio-destacado">
+            <span class="precio-label">Total:</span>
+            <span class="precio-valor" id="precio-interactivo">$140</span>
+          </div>
+          <button class="botones verde-degradado btn-ancho2" onclick="agregarCombo('interactivo')">
+            Agregar al Carrito
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="p-50" id="vip">
+      <div class="row">
+        <div class="col-12 texto-centrado">
+          <h2 class="color-verde-claro titulo-equilibrado">Contacto y Suscripción VIP</h2>
+          <p class="texto-equilibrado">Conéctate con nosotros y sé parte de nuestra comunidad estelar</p>
+        </div>
+      </div>
+      <div class="formularios-container">
+        <div class="formulario-card glass">
+          <div class="formulario-header">
+            <h3 class="color-verde-claro">📧 Contáctanos</h3>
+            <p class="texto-equilibrado">¿Tienes alguna pregunta? Escríbenos</p>
+          </div>
+          <form method="post" id="form-contacto" class="formulario-content">
+            <div class="form-group">
+              <label for="contacto-nombre">Nombre completo *</label>
+              <input type="text" id="contacto-nombre" name="nombre" class="form-control" placeholder="Ej: Juan Pérez"
+                required>
+              <span class="error-mensaje" id="error-contacto-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="contacto-email">Correo electrónico *</label>
+              <input type="email" id="contacto-email" name="email" class="form-control" placeholder="correo@ejemplo.com"
+                required>
+              <span class="error-mensaje" id="error-contacto-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="contacto-telefono">Teléfono *</label>
+              <input type="text" id="contacto-telefono" name="telefono" class="form-control"
+                placeholder="(+52) 55 1234 5678" required>
+              <span class="error-mensaje" id="error-contacto-telefono"></span>
+            </div>
+            <div class="form-group">
+              <label for="contacto-asunto">Asunto *</label>
+              <select id="contacto-asunto" name="asunto" class="form-control" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="informacion">Información general</option>
+                <option value="reservas">Reservas y eventos</option>
+                <option value="sugerencias">Sugerencias</option>
+                <option value="quejas">Quejas o reclamos</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="error-mensaje" id="error-contacto-asunto"></span>
+            </div>
+            <div class="form-group">
+              <label for="contacto-mensaje">Mensaje *</label>
+              <textarea id="contacto-mensaje" name="mensaje" class="form-control" rows="5"
+                placeholder="Escribe tu mensaje aquí..." required></textarea>
+              <span class="error-mensaje" id="error-contacto-mensaje"></span>
+            </div>
+            <input type="button" value="Enviar Mensaje" class="botones verde-degradado btn-ancho2"
+              onclick="enviarContacto()">
+          </form>
+        </div>
+        <div class="formulario-card glass">
+          <div class="formulario-header">
+            <h3 class="color-verde-claro"><i class="fa-solid fa-star" style="color: #FFD43B;"></i> Suscríbete VIP</h3>
+            <p class="texto-equilibrado">Recibe ofertas exclusivas y estrenos</p>
+          </div>
+          <form method="post" id="form-suscripcion" class="formulario-content">
+            <div class="form-group">
+              <label for="suscripcion-nombre">Nombre *</label>
+              <input type="text" id="suscripcion-nombre" name="nombre" class="form-control" placeholder="Tu nombre"
+                required>
+              <span class="error-mensaje" id="error-suscripcion-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="suscripcion-email">Correo electrónico *</label>
+              <input type="email" id="suscripcion-email" name="email" class="form-control"
+                placeholder="correo@ejemplo.com" required>
+              <span class="error-mensaje" id="error-suscripcion-email"></span>
+            </div>
+            <div class="form-group">
+              <label for="suscripcion-fecha">Fecha de nacimiento *</label>
+              <input type="date" id="suscripcion-fecha" name="fecha" class="form-control" required>
+              <span class="error-mensaje" id="error-suscripcion-fecha"></span>
+            </div>
+            <div class="form-group">
+              <label>Géneros de películas favoritos *</label>
+              <div class="checkbox-group">
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="accion">
+                  <span>Acción</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="comedia">
+                  <span>Comedia</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="drama">
+                  <span>Drama</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="scifi">
+                  <span>Ciencia Ficción</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="terror">
+                  <span>Terror</span>
+                </label>
+                <label class="checkbox-option">
+                  <input type="checkbox" name="genero" value="animacion">
+                  <span>Animación</span>
+                </label>
+              </div>
+              <span class="error-mensaje" id="error-suscripcion-generos"></span>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-option checkbox-terminos">
+                <input type="checkbox" id="suscripcion-terminos" required>
+                <span>Acepto recibir correos promocionales y novedades *</span>
+              </label>
+              <span class="error-mensaje" id="error-suscripcion-terminos"></span>
+            </div>
+            <input type="button" value="Suscribirme Ahora" class="botones verde-degradado btn-ancho2"
+              onclick="enviarSuscripcion()">
+          </form>
+          <div class="beneficios-vip">
+            <h4 class="color-verde-claro">Beneficios VIP:</h4>
+            <ul>
+              <li>✨ Descuentos exclusivos en boletos</li>
+              <li>🎁 Promociones especiales en dulcería</li>
+              <li>🎞️ Preventa de estrenos</li>
+              <li>🎂 Regalo de cumpleaños</li>
+              <li>✉️ Newsletter semanal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="texto-centrado">
+        <h2 class="titulo-equilibrado color-verde-claro"><i class="fa-solid fa-map-pin"></i> Nos ubicamos en</h2>
+        <iframe class="img-rounded"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.965428925736!2d-84.10992364890241!3d9.936834492859624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fca9759d5ae9%3A0xe665ea444f4e47a2!2sEstadio+Nacional+de+Costa+Rica!5e0!3m2!1ses!2scr!4v1536889282260"
+          width="1000" height="700" frameborder="0" allowfullscreen></iframe>
+      </div>
+      </div>
+    </section>
+    <footer class="footer-principal">
+      <div class="footer-container">
+        <div class="footer-columna">
+          <h3 class="footer-titulo">Información</h3>
+          <div class="footer-item">
+            <i class="fa-solid fa-map-pin"></i>
+            <span>Av. Insurgente Sur #2450, CDMX</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Lun - Sáb: 9:00 AM - 8:00 PM</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Domingos: 10:00 AM - 6:00 PM</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-film"></i>
+            <span>5 Salas Premium | Audio Dolby</span>
+          </div>
+        </div>
+        <div class="footer-columna">
+          <h3 class="footer-titulo">Contacto</h3>
+          <div class="footer-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@novacine.com</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(+52) 55 1234 5678</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-globe"></i>
+            <span>www.novacine.com</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp: (+52) 55 9876 5432</span>
+          </div>
+        </div>
+        <div class="footer-columna">
+          <h3 class="footer-titulo">Síguenos</h3>
+          <div class="footer-redes-sociales">
+            <a href="https://www.facebook.com" target="_blank" class="red-social" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="red-social" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="red-social" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" class="red-social" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="red-social" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+          <div class="footer-item" style="margin-top: 20px;">
+            <i class="fa-solid fa-hashtag"></i>
+            <span>#NovaCine #GalaxiaDelCine</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer-derechos">
+      <p>
+        © 2025 <strong>Nova - La Galaxia del Cine</strong>. Todos los derechos reservados.
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/dulceria.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/video-lightbox.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/formularios.js"></script>
+  </html>
+</body>
+
+</html>
